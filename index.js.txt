@@ -1,0 +1,19 @@
+let a=0;
+document.getElementById("abc1").addEventListener("click",(e)=>{
+  console.log("first");
+  e.stopImmediatePropagation();
+  a++;
+})
+document.getElementById("abc1").addEventListener("click",()=>{
+  console.log("second");a++;
+})
+document.getElementById("abc1").addEventListener("click",()=>{
+  console.log("third");
+  a++;
+  console.log(a);
+})
+document.getElementById("abc1").addEventListener("keyup",()=>{
+  console.log("key");
+  a++;
+  console.log(a);
+})
